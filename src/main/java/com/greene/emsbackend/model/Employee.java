@@ -23,15 +23,21 @@ public class Employee {
     @Column(name = "email_id")
     private String emailId;
 
+    @Column(name="age")
+    private float age;
+
+
     public Employee() {
 
     }
 
-    public Employee(String firstName, String lastName, String emailId) {
+    public Employee(String firstName, String lastName, String emailId, float age) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;
+        this.age=age;
+
     }
     public long getId() {
         return id;
@@ -57,5 +63,14 @@ public class Employee {
     public void setEmailId(String emailId) {
         this.emailId = emailId;
     }
+
+    public float getAge() {
+        return age;
+    }
+
+    public void setAge(float age) {
+        this.age = age;
+    }
+
 }
 
